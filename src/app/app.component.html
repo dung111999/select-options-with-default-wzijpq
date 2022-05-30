@@ -1,0 +1,19 @@
+<form [formGroup]="projectinformationFrm">
+  <select>
+    <option value="null" disabled>Please select</option>
+    <option *ngFor="let org of OrganizationList">
+      {{ org.OrganizationName }}
+    </option>
+  </select>
+  <br /><br />
+  <div>
+    <a class="btn btn-default" (click)="modal.dismiss()">
+      <span class="glyphicon glyphicon-remove"></span>
+      Cancel
+    </a>
+    <button type="submit" class="btn btn-primary">
+      <span class="glyphicon glyphicon-save"></span>
+      Save
+    </button>
+  </div>
+</form>
